@@ -22,7 +22,12 @@ const TopSellers = () => {
   }, []);
 
   return (
-    <section id="section-popular" className="pb-5">
+    <section
+      id="section-popular"
+      className="pb-5"
+      data-aos="fade-in"
+      data-aos-duration="1000"
+    >
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -51,7 +56,10 @@ const TopSellers = () => {
                 : data.map((item) => (
                     <li key={item.id}>
                       <div className="author_list_pp">
-                        <Link to={`/author/${item.authorId}`} state={{ authorId: item.authorId }}>
+                        <Link
+                          to={`/author/${item.authorId}`}
+                          state={{ authorId: item.authorId }}
+                        >
                           <img
                             className="lazy pp-author"
                             src={item.authorImage}
@@ -61,7 +69,10 @@ const TopSellers = () => {
                         </Link>
                       </div>
                       <div className="author_list_info">
-                        <Link to={`/author/${item.authorId}`} state={{ authorId: item.authorId }}>
+                        <Link
+                          to={`/author/${item.authorId}`}
+                          state={{ authorId: item.authorId }}
+                        >
                           {item.authorName}
                         </Link>
                         <span>{item.price} ETH</span>
